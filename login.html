@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bakerz Bite | Login</title>
@@ -24,3 +25,580 @@
 <h2 class="art-title">A Little Bite,<br>A Lot of Happiness.</h2><p class="art-description">Freshly baked happiness, handcrafted with love and served with a sprinkle of magic.</p>
 <div class="bakery-stage"><div class="orbit"><span class="orbit-item">🍩</span><span class="orbit-item">🍪</span><span class="orbit-item">🥐</span></div><div class="cake">🎂</div></div><div class="art-footer">✨ &nbsp; Fresh From Our Oven To Your Heart</div>
 </section></main><script src="auth.js"></script></body></html>
+=======
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakerz Bite | Login</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    :root {
+      --brown: #48251d;
+      --pink: #f7b9bb;
+      --cream: #fff8ef;
+      --orange: #d98750
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--cream);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+      overflow-x: hidden;
+      color: var(--brown)
+    }
+
+    .auth-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      max-width: 1100px;
+      min-height: 650px;
+      background: #fff;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 25px 80px #48251d1a;
+      animation: appear .8s ease
+    }
+
+    .auth-side {
+      padding: 48px 55px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--brown);
+      margin-bottom: 48px
+    }
+
+    .logo span {
+      color: var(--orange)
+    }
+
+    .logo small {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: #a58b7f;
+      font-weight: 500
+    }
+
+    .heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 3.2vw, 39px);
+      color: var(--brown);
+      line-height: 1.2
+    }
+
+    .subtitle {
+      margin: 14px 0 30px;
+      color: #99877e;
+      font-size: 13px;
+      line-height: 1.8
+    }
+
+    .input-group {
+      margin-bottom: 20px
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--brown);
+      margin-bottom: 9px
+    }
+
+    .input-box {
+      position: relative
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 15px 16px;
+      border: 1px solid #eee0d8;
+      background: #fffcf9;
+      border-radius: 12px;
+      outline: none;
+      font-family: inherit;
+      font-size: 13px;
+      transition: .3s
+    }
+
+    .input-box input:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 4px #d987501c
+    }
+
+    .password-input {
+      padding-right: 70px !important
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      color: #bd7047;
+      border: 0;
+      background: transparent
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      color: #8d7d75;
+      margin: 2px 0 24px;
+      flex-wrap: wrap
+    }
+
+    .options label {
+      display: flex;
+      gap: 6px;
+      align-items: center
+    }
+
+    a {
+      color: #bd7047;
+      font-weight: 600;
+      text-decoration: none
+    }
+
+    a:hover {
+      text-decoration: underline
+    }
+
+    .auth-btn {
+      border: 0;
+      width: 100%;
+      background: var(--brown);
+      color: #fff;
+      padding: 16px;
+      border-radius: 12px;
+      font-family: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      transition: .3s
+    }
+
+    .auth-btn:hover {
+      background: var(--orange);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px #d9875040
+    }
+
+    .auth-switch {
+      text-align: center;
+      color: #9c8b82;
+      font-size: 12px;
+      margin-top: 25px
+    }
+
+    .message {
+      font-size: 12px;
+      line-height: 1.6;
+      margin-top: 12px
+    }
+
+    .error {
+      color: #bd3434
+    }
+
+    .success {
+      color: #287547
+    }
+
+    .art-side {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, #fbd9d3, #f5b5a5 55%, #e99d81);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 35px;
+      isolation: isolate
+    }
+
+    .art-side:before,
+    .art-side:after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: #fff7e7;
+      opacity: .25;
+      z-index: -1
+    }
+
+    .art-side:before {
+      width: 350px;
+      height: 350px;
+      top: -100px;
+      right: -120px
+    }
+
+    .art-side:after {
+      width: 260px;
+      height: 260px;
+      bottom: -90px;
+      left: -80px
+    }
+
+    .art-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(30px, 3.2vw, 39px);
+      text-align: center;
+      line-height: 1.2;
+      color: var(--brown);
+      z-index: 2
+    }
+
+    .art-description {
+      text-align: center;
+      font-size: 12px;
+      color: #75473b;
+      margin-top: 13px;
+      max-width: 280px;
+      line-height: 1.8;
+      z-index: 2
+    }
+
+    .bakery-stage {
+      width: 100%;
+      max-width: 400px;
+      height: 290px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center
+    }
+
+    .cake {
+      font-size: 130px;
+      filter: drop-shadow(0 18px 12px #75473b30);
+      animation: cakeFloat 3s ease-in-out infinite;
+      z-index: 2
+    }
+
+    .orbit {
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border: 1px dashed #fff7e9aa;
+      border-radius: 50%;
+      animation: rotate 18s linear infinite
+    }
+
+    .orbit-item {
+      position: absolute;
+      font-size: 40px
+    }
+
+    .orbit-item:nth-child(1) {
+      top: 15px;
+      left: 25px
+    }
+
+    .orbit-item:nth-child(2) {
+      right: 0;
+      top: 110px
+    }
+
+    .orbit-item:nth-child(3) {
+      bottom: 8px;
+      left: 50px
+    }
+
+    .float {
+      position: absolute;
+      font-size: 30px;
+      animation: drift 4s ease-in-out infinite
+    }
+
+    .f1 {
+      top: 15px;
+      left: 5%
+    }
+
+    .f2 {
+      top: 60px;
+      right: 8%;
+      animation-delay: 1s
+    }
+
+    .f3 {
+      bottom: 25px;
+      right: 7%;
+      animation-delay: 2s
+    }
+
+    .f4 {
+      bottom: 50px;
+      left: 5%;
+      animation-delay: 1.5s
+    }
+
+    .art-footer {
+      background: #fff7e9b8;
+      border: 1px solid #fff8ed;
+      border-radius: 30px;
+      padding: 12px 22px;
+      color: var(--brown);
+      font-size: 11px;
+      font-weight: 600;
+      z-index: 2
+    }
+
+    .sparkle {
+      position: absolute;
+      color: #fff;
+      animation: twinkle 2s ease-in-out infinite
+    }
+
+    .s1 {
+      top: 20%;
+      left: 20%
+    }
+
+    .s2 {
+      top: 35%;
+      right: 15%;
+      animation-delay: .5s
+    }
+
+    .s3 {
+      bottom: 20%;
+      left: 23%;
+      animation-delay: 1s
+    }
+
+    @keyframes cakeFloat {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(-4deg)
+      }
+
+      50% {
+        transform: translateY(-15px) rotate(4deg)
+      }
+    }
+
+    @keyframes drift {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(-10deg)
+      }
+
+      50% {
+        transform: translateY(-18px) rotate(12deg)
+      }
+    }
+
+    @keyframes rotate {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        opacity: .35;
+        transform: scale(.8)
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.3)
+      }
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(20px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @media(max-width:800px) {
+      body {
+        padding: 15px
+      }
+
+      .auth-container {
+        grid-template-columns: 1fr;
+        max-width: 480px
+      }
+
+      .auth-side {
+        padding: 35px 28px
+      }
+
+      .logo {
+        margin-bottom: 35px
+      }
+
+      .art-side {
+        min-height: 470px
+      }
+
+      .bakery-stage {
+        height: 245px
+      }
+
+      .cake {
+        font-size: 105px
+      }
+
+      .orbit {
+        width: 220px;
+        height: 220px
+      }
+    }
+
+    @media(max-width:400px) {
+      .auth-side {
+        padding: 28px 20px
+      }
+
+      .options {
+        align-items: flex-start
+      }
+
+      .art-side {
+        padding: 25px 15px
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+
+      *,
+      *:before,
+      *:after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="auth-container">
+    <section class="auth-side">
+      <div class="logo">Bakerz<span>Bite.</span><small>BAKED WITH LOVE</small></div>
+      <h1 class="heading">Welcome<br>Back, Sweet Tooth!</h1>
+      <p class="subtitle">Your favourite treats are waiting for you. Sign in and make today a little sweeter.</p>
+      <form id="loginForm">
+        <div class="input-group"><label for="email">Email Address</label>
+          <div class="input-box"><input type="email" id="email" placeholder="you@example.com" autocomplete="email"
+              required></div>
+        </div>
+        <div class="input-group"><label for="password">Password</label>
+          <div class="input-box"><input class="password-input" type="password" id="password"
+              placeholder="Enter your password" autocomplete="current-password" minlength="6" required><button
+              type="button" class="toggle-password" id="togglePassword" aria-label="Show password">Show</button></div>
+        </div>
+        <div class="options"><label><input type="checkbox" id="remember"> Remember me</label><a href="#"
+            id="forgotLink">Forgot Password?</a></div>
+        <button type="submit" class="auth-btn">Sign In &nbsp; →</button>
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+      </form>
+      <p class="auth-switch">Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </section>
+    <section class="art-side" aria-label="Animated bakery illustration">
+      <span class="sparkle s1">✦</span><span class="sparkle s2">✧</span><span class="sparkle s3">✦</span>
+      <span class="float f1">🍪</span><span class="float f2">🍓</span><span class="float f3">🧁</span><span
+        class="float f4">🍒</span>
+      <h2 class="art-title">A Little Bite,<br>A Lot of Happiness.</h2>
+      <p class="art-description">Freshly baked happiness, handcrafted with love and served with a sprinkle of magic.</p>
+      <div class="bakery-stage">
+        <div class="orbit"><span class="orbit-item">🍩</span><span class="orbit-item">🍪</span><span
+            class="orbit-item">🥐</span></div>
+        <div class="cake">🎂</div>
+      </div>
+      <div class="art-footer">✨ &nbsp; Fresh From Our Oven To Your Heart</div>
+    </section>
+  </main>
+  <script>
+    const USERS_KEY = 'bakerzBiteUsers';
+    const SESSION_KEY = 'bakerzBiteCurrentUser';
+
+    // Keep the user signed in between visits on this same browser.
+    if (localStorage.getItem(SESSION_KEY)) window.location.replace('index.html');
+
+    const passwordField = document.getElementById('password');
+    const togglePassword = document.getElementById('togglePassword');
+    togglePassword.addEventListener('click', () => {
+      const show = passwordField.type === 'password';
+      passwordField.type = show ? 'text' : 'password';
+      togglePassword.textContent = show ? 'Hide' : 'Show';
+      togglePassword.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+    });
+
+    document.getElementById('loginForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const email = document.getElementById('email').value.trim().toLowerCase();
+      const password = passwordField.value;
+      const message = document.getElementById('message');
+      message.className = 'message';
+      try {
+        const users = JSON.parse(localStorage.getItem(USERS_KEY) || '[]');
+        const user = users.find(item => item.email === email && item.password === password);
+        if (!user) {
+          message.classList.add('error');
+          message.textContent = 'Email or password is incorrect. Please sign up if you do not have an account.';
+          return;
+        }
+        localStorage.setItem(SESSION_KEY, JSON.stringify({ name: user.name, email: user.email, signedInAt: new Date().toISOString() }));
+        message.classList.add('success');
+        message.textContent = 'Login successful! Taking you to the website…';
+        setTimeout(() => window.location.href = 'index.html', 700);
+      } catch (error) {
+        message.classList.add('error');
+        message.textContent = 'Browser storage is unavailable. Please enable local storage and try again.';
+      }
+    });
+
+    document.getElementById('forgotLink').addEventListener('click', event => {
+      event.preventDefault();
+      const message = document.getElementById('message');
+      message.className = 'message';
+      message.textContent = 'Password reset is not connected yet.';
+    });
+  </script>
+</body>
+
+</html>
+>>>>>>> 4dbd5e5bab0fc244d3b84b5c835977741df3da07
