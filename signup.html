@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bakerz Bite | Sign Up</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body>
+<main class="auth-container signup-container">
+<section class="auth-side">
+<a class="logo" href="index.html">Bakerz<span>Bite.</span><small>BAKED WITH LOVE</small></a>
+<h1 class="heading">Join Our<br>Sweet Community!</h1>
+<p class="subtitle">Create your account to keep your favourite bakery treats close.</p>
+<form id="signupForm">
+<div class="input-group"><label for="name">Full Name</label><div class="input-box"><input type="text" id="name" placeholder="Your full name" autocomplete="name" required></div></div>
+<div class="input-group"><label for="email">Email Address</label><div class="input-box"><input type="email" id="email" placeholder="you@example.com" autocomplete="email" required></div></div>
+<div class="input-group"><label for="password">Password</label><div class="input-box"><input class="password-input" type="password" id="password" placeholder="At least 8 characters" minlength="8" autocomplete="new-password" required><button type="button" class="toggle-password" id="togglePassword">Show</button></div></div>
+<div class="input-group"><label for="confirmPassword">Confirm Password</label><div class="input-box"><input type="password" id="confirmPassword" placeholder="Enter password again" minlength="8" autocomplete="new-password" required></div></div>
+<button type="submit" class="auth-btn">Create Account &nbsp; →</button><p id="message" class="message" role="status" aria-live="polite"></p>
+</form><p class="auth-switch">Already have an account? <a href="login.html">Sign In</a></p><p class="back-home"><a href="index.html">← Back to home</a></p>
+</section>
+<section class="art-side"><span class="sparkle s1">✦</span><span class="sparkle s2">✧</span><span class="sparkle s3">✦</span><span class="float f1">🍪</span><span class="float f2">🍓</span><span class="float f3">🧁</span><span class="float f4">🍒</span>
+<h2 class="art-title">A Little Bite,<br>A Lot of Happiness.</h2><p class="art-description">Freshly baked happiness, handcrafted with love and served with a sprinkle of magic.</p>
+<div class="bakery-stage"><div class="orbit"><span class="orbit-item">🍩</span><span class="orbit-item">🍪</span><span class="orbit-item">🥐</span></div><div class="cake">🎂</div></div><div class="art-footer">✨ &nbsp; Fresh From Our Oven To Your Heart</div>
+</section></main><script src="auth.js"></script></body></html>

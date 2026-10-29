@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakerz Bite | Freshly Baked Happiness</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bakery-nav sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">🍰 Bakerz Bite</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html" id="authNavLink">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="bakerySlider" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#bakerySlider" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#bakerySlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#bakerySlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1600&q=85" class="d-block w-100 slider-img" alt="Chocolate celebration cake">
+      <div class="carousel-caption"><h1>Sweet Moments, Freshly Baked</h1><p>Delicious cakes made with love.</p><a href="#products" class="btn btn-bakery">Explore Products</a></div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=1600&q=85" class="d-block w-100 slider-img" alt="Freshly baked cupcakes">
+      <div class="carousel-caption"><h1>A Little Bite of Happiness</h1><p>Beautiful cupcakes for every occasion.</p><a href="#products" class="btn btn-bakery">Shop Treats</a></div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=85" class="d-block w-100 slider-img" alt="Fresh bakery bread">
+      <div class="carousel-caption"><h1>Fresh from Our Oven</h1><p>Discover your new favourite bakery treats.</p><a href="contact.html" class="btn btn-bakery">Contact Us</a></div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#bakerySlider" data-bs-slide="prev" aria-label="Previous slide"><span class="carousel-control-prev-icon"></span></button>
+  <button class="carousel-control-next" type="button" data-bs-target="#bakerySlider" data-bs-slide="next" aria-label="Next slide"><span class="carousel-control-next-icon"></span></button>
+</div>
+
+<section class="container py-5" id="products">
+  <div class="text-center mb-4">
+    <p class="eyebrow">MADE WITH LOVE</p>
+    <h2 class="section-title">Our Delicious Treats</h2>
+    <p>Fresh flavours to make your day sweeter.</p>
+  </div>
+  <div class="row g-4" id="productList"></div>
+  <nav class="mt-5" aria-label="Product pages"><ul class="pagination justify-content-center" id="pagination"></ul></nav>
+  <p class="page-info text-center" id="pageInfo"></p>
+</section>
+
+<section class="special-section py-5 text-center">
+  <div class="container"><h2>Every Celebration Needs Something Sweet!</h2><p>Let Bakerz Bite make your special moments memorable.</p><a href="contact.html" class="btn btn-bakery">Get in Touch</a></div>
+</section>
+<footer class="footer text-center py-4">
+  <p class="mb-1">© 2026 Bakerz Bite. All rights reserved.</p>
+  <p class="mb-0">Baked with ❤️ and served with a smile.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
